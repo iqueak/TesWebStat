@@ -1,0 +1,17 @@
+@mixin selection($color)
+  &::selection
+    background-color: $color
+  &::-moz-selection
+    background-color: $color
+
+*
+  margin: 0
+  padding: 0
+  @include selection($selection-color)
+
+body
+  background-color: $body-bgc
+  cursor: $cursor-def
+
+a
+  cursor: $cursor-hov
