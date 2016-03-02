@@ -21,7 +21,6 @@ a {
 .nav-block {
   background-color: #f1f1f1;
   display: block;
-  position: fixed;
   width: 100%;
   height: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -81,9 +80,6 @@ a {
   width: 1024px;
   height: 100%;
   margin: 0 auto;
-  position: relative;
-  z-index: 0;
-  top: 40px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); }
 
 .head-block {
@@ -264,11 +260,11 @@ a {
           font-family: "Times New Roman"; }
 
 .footer-block {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 11px 8px rgba(0, 0, 0, 0.2);
   height: 100px;
   width: 1024px;
   position: relative;
-  margin: 40px auto auto;
+  margin: 0 auto auto;
   background-color: #f1f1f1; }
   .footer-block > .footer-text {
     cursor: url(..//img/w_cursor.png), default;

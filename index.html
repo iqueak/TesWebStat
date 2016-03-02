@@ -111,6 +111,18 @@
             adaptiveHeight: false
         });
     });
+    function footerToBottom() {
+        var browserHeight = $(window).height(),
+                footerOuterHeight = $('.footer-block').outerHeight(true),
+                navOuterHeight = $('.nav-block').outerHeight(true);
+        $('.page-block').css({
+            'min-height': browserHeight - (footerOuterHeight + navOuterHeight)
+        });
+    };
+    footerToBottom();
+    $(window).resize(function () {
+        footerToBottom();
+    });
 </script>
 </body>
 </html>
