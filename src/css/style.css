@@ -13,10 +13,10 @@
 
 body {
   background-color: #ededed;
-  cursor: url(../../res/img/b_cursor.png), default; }
+  cursor: url(..//img/b_cursor.png), default; }
 
 a {
-  cursor: url(../../res/img/t_cursor.png), pointer; }
+  cursor: url(..//img/t_cursor.png), pointer; }
 
 .nav-block {
   background-color: #f1f1f1;
@@ -61,7 +61,7 @@ a {
           padding-right: 0; }
         .nav-block > .nav-container > .nav-group-element > .nav-button:hover {
           color: #80784f;
-          cursor: url(../../res/img/t_cursor.png), pointer; }
+          cursor: url(..//img/t_cursor.png), pointer; }
       .nav-block > .nav-container > .nav-group-element > .nav-message {
         color: #636363;
         padding: 0 10px; }
@@ -88,7 +88,7 @@ a {
 
 .head-block {
   width: 100%;
-  cursor: url(../../res/img/w_cursor.png), default;
+  cursor: url(..//img/w_cursor.png), default;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
   .head-block > .bx-wrapper > .bx-viewport > .bxslider > .head-item {
     height: 248px; }
@@ -103,7 +103,7 @@ a {
         font-size: 12px;
         font-family: Georgia; }
   .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-1 {
-    background: url(../../res/img/head.png) no-repeat; }
+    background: url(..//img/head.png) no-repeat; }
     .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-1 > .head-item-container {
       float: right; }
       .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-1 > .head-item-container > .head-item-header {
@@ -111,7 +111,7 @@ a {
       .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-1 > .head-item-container > .head-item-content {
         color: #e8e8e8; }
   .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-2 {
-    background: url(../../res/img/head2.png) no-repeat; }
+    background: url(..//img/head2.png) no-repeat; }
     .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-2 > .head-item-container {
       float: left; }
       .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-2 > .head-item-container > .head-item-header {
@@ -119,7 +119,7 @@ a {
       .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-2 > .head-item-container > .head-item-content {
         color: #80784f; }
   .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-3 {
-    background: url(../../res/img/head3.png) no-repeat; }
+    background: url(..//img/head3.png) no-repeat; }
     .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-3 > .head-item-container {
       float: left; }
       .head-block > .bx-wrapper > .bx-viewport > .bxslider > #head-item-3 > .head-item-container > .head-item-header {
@@ -156,7 +156,7 @@ a {
         .content-block > .content-left > .content-left-items > .content-left-item > .content-left-item-head {
           margin: 0 0 10px;
           font-size: 17px;
-          cursor: url(../../res/img/t_cursor.png), pointer;
+          cursor: url(..//img/t_cursor.png), pointer;
           color: #666633; }
         .content-block > .content-left > .content-left-items > .content-left-item > .content-left-item-date {
           font-family: "Times New Roman";
@@ -169,7 +169,7 @@ a {
           text-transform: uppercase;
           color: #666633;
           font-family: "Times New Roman";
-          cursor: url(../../res/img/t_cursor.png), pointer; }
+          cursor: url(..//img/t_cursor.png), pointer; }
     .content-block > .content-left > .content-left-controls {
       margin: 10px 0;
       float: right; }
@@ -199,7 +199,7 @@ a {
       .content-block > .content-right > .content-right-search > form > .content-right-search-textarea {
         background-color: transparent;
         border: 1px solid #cbcbcb;
-        cursor: url(../../res/img/t_cursor.png), pointer;
+        cursor: url(..//img/t_cursor.png), pointer;
         border-radius: 1px;
         box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.2);
         padding: 5px 7px 3px;
@@ -239,7 +239,7 @@ a {
         border: 1px solid #cbcbcb;
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
         color: #636363;
-        cursor: url(../../res/img/t_cursor.png), pointer;
+        cursor: url(..//img/t_cursor.png), pointer;
         border-radius: 1px;
         padding: 4px 6px;
         width: 20%;
@@ -271,7 +271,7 @@ a {
   margin: 40px auto auto;
   background-color: #f1f1f1; }
   .footer-block > .footer-text {
-    cursor: url(../../res/img/w_cursor.png), default;
+    cursor: url(..//img/w_cursor.png), default;
     position: absolute;
     bottom: 0;
     padding: 10px 5px 5px 120px;
