@@ -11,12 +11,22 @@
   &:focus
     outline: 0
     color: rgba(0, 0, 0, .3)
+@mixin control-disabled
+  color: rgba($content-controls-tx-color,0.5)
+  pointer-events: none
+  cursor: $cursor-def
+  &:hover,&:active,&:visited
+    color: rgba($content-controls-tx-color,0.5)
+    cursor: $cursor-def
+
 
 .content-block
   height: 100%
   margin-top: 20px
   width: 100%
   padding: 0
+  @include small-screen
+    margin-top: 5px
   >.content-left
     @include small-screen
       padding-right: 10px
@@ -44,8 +54,9 @@
         >.content-left-item-head
           margin: 0 0 10px
           font-size: 17px
-          cursor: $cursor-hov
           color: $content-item-head-tx-color
+          &:hover
+            color: $content-hover
         >.content-left-item-date
           font-family: "Times New Roman"
           color: $content-item-date-tx-color
@@ -57,22 +68,31 @@
           text-transform: uppercase
           color: $content-item-button-tx-color
           font-family: "Times New Roman"
-          cursor: $cursor-hov
+          &:hover
+            color: $content-hover
     >.content-left-controls
       margin: 10px 0
       float: right
       >.content-left-controls-item
-        padding: 3px 7px
+        padding: 4px 8px 3px
         border: 1px solid $page-brd-color
         color: $content-controls-tx-color
         text-decoration: none
         &:first-child
           margin-right: 10px
+          font-family: "Georgia"
+          @include control-disabled
+        &:nth-child(2)
+          @include control-disabled
         &:last-child
           margin-left: 10px
+          font-family: "Georgia"
         &:active,
         &:visited
           color: $content-controls-tx-color
+        &:hover
+          background-color: rgb(140, 140, 100)
+          color: #f1f1f1
   >.content-right
     @include small-screen
     padding: 0 10px
@@ -92,7 +112,6 @@
         >.content-right-search-textarea
           background-color: transparent
           border: 1px solid $page-brd-color
-          cursor: $cursor-hov
           border-radius: 1px
           box-shadow: inset 0 0 5px lighten($shadow-color,50)
           padding: 5px 7px 3px
@@ -108,11 +127,11 @@
           @include unfocus
         >.content-right-search-submit
           font-family: Georgia
+          cursor: $cursor-def
           background-color: transparent
           border: 1px solid $page-brd-color
           box-shadow: inset 0 0 5px rgba(0, 0, 0, .1)
           color: $content-controls-tx-color
-          cursor: $cursor-hov
           border-radius: 1px
           padding: 4px 6px
           width: 20%

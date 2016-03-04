@@ -12,11 +12,13 @@
 *
   margin: 0
   padding: 0
+  border: 0
+  outline: 0
   @include selection($selection-color)
 
 body
   background-color: $body-bgc
   cursor: $cursor-def
 
-a
-  cursor: $cursor-hov
+a,input[type="submit"]
+  cursor: $cursor-def
