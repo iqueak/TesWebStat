@@ -1,0 +1,235 @@
+
+@mixin not-last-child($selector)
+  & #{$selector}:not(:last-child)
+    @content
+
+@mixin not-first-child($selector)
+  & #{$selector}:not(:first-child)
+    @content
+
+.page-block
+  >.character-body-content
+    margin: 0
+    padding: 40px 10px 0
+    width: 100%
+    >.divide-content
+      width: 100%
+      padding: 0
+      margin: 0
+      >.content-divide-block
+        padding: 0
+        margin: 0
+        @include not-last-child('.content-divide-block-item')
+          margin-bottom: 10px
+        >.content-divide-block-item
+          width: 450px
+          padding: 0
+          margin: 0
+          >.divide-block-item-title
+            font-size: 20px
+            font-family: "Times New Roman"
+            font-weight: bold
+            text-transform: uppercase
+            color: $bch-content-item-title-color
+            padding-left: 15px
+          >.divide-block-item-content
+            border: 1px solid $page-brd-color
+      >.content-left
+        >.item-char-info
+          >.divide-block-item-content
+            padding: 10px 20px 5px
+            >.char-info-statistics
+              vertical-align: top
+              display: inline-block
+              width: 50%
+              padding: 0
+              margin: 0
+              >.info-statistics-row
+                padding: 0
+                margin: 0
+                >.statistics-row-column
+                  padding: 0
+                  font-weight: bold
+                  font-size: 12px
+                  font-family: "Times New Roman"
+                  color: $bch-content-stat-text-color
+                  text-transform: uppercase
+                >:first-child
+                  text-align: right
+                  padding-left: 15px
+                  width: auto
+                  min-width: 80px
+                >:last-child
+                  text-align: left
+                  padding-left: 10px
+                  width: auto
+            >.char-info-avatar
+              display: inline-block
+              float: right
+              width: 80px
+              height: 80px
+              background-image: $bch-avatar-img
+              border: 1px solid $page-brd-color
+            //border-radius: 6px
+            >.char-info-main-params
+              width: 100%
+              padding: 0
+              margin: 0
+              >.param-health
+                background-color: $bch-info-param-health-color
+              >.param-manna
+                background-color: $bch-info-param-manna-color
+              >.param-stamina
+                background-color: $bch-info-param-stamina-color
+              >.params-row
+                padding: 0
+                margin: 5px 0 0 0
+                width: 100%
+                >.param-name
+                  margin-left: 5px
+                  font-size: 12px
+                  line-height: 1
+                  font-family: "Times New Roman"
+                  font-weight: bold
+                  text-transform: uppercase
+                  color: $bch-info-param-name-tx-color
+                  border-right: 1px solid $page-bgc
+                  width: 115px
+        >.item-char-basic
+          >.divide-block-item-content
+            padding: 10px 20px 10px
+            margin: 0
+            width: 450px
+            @include not-first-child('.basic-content-column')
+              padding-left: 10px
+            >.basic-content-column
+              padding: 0
+              margin: 0
+              @include not-last-child('.content-column-item')
+                margin-bottom: 10px
+              >.content-column-item
+                padding: 0
+                margin: 0
+                >.basic-content-column-item-title
+                  font-family: "Times New Roman"
+                  font-size: 12px
+                  color: $bch-content-stat-text-color
+                  font-weight: bold
+                  margin-left: 5px
+                >.basic-content-column-item-body
+                  @include not-last-child('.basic-content-row')
+                    margin-bottom: 1px
+                  >.basic-content-row
+                    padding: 0
+                    margin: 0
+                    >.basic-content-element
+                      text-transform: uppercase
+                      height: 29px
+                      line-height: normal
+                      float: left
+                      padding: 4px 5px
+                      border: 1px solid $page-brd-color
+                      color: $bch-content-stat-text-color
+                      font-family: "Times New Roman"
+                      font-weight: bold
+                    >.basic-content-row-title
+                      width: 158px
+                      font-size: 17px
+                    >.basic-content-row-title-calc
+                      font-size: 17px
+                      width: 142px
+                    >.basic-content-row-value-calc,.basic-content-row-value
+                      text-align: center
+                      font-size: 17px
+                      width: 33px
+                      margin: 0 1px 0
+                    >.basic-content-buttons-calc
+                      float: left
+                      height: 100%
+                      line-height: -1px
+                      >.button-calc
+                        border: 1px solid $page-brd-color
+                        width: 14px
+                        height: 14px
+                        &:first-child
+                          background-image: $bch-controls-img
+                          background-position: 0 0
+                          margin-bottom: 1px
+                        &:last-child
+                          background-image: $bch-controls-img
+                          background-position: 0 -12px
+                    >.basic-content-row-value-bool
+                      width: 192px
+                      font-size: 12px
+                      text-align: center
+                      padding: 5px 0 5px 0
+                    >.basic-content-row-title-addit
+                      width: 104px
+                      font-size: 17px
+                    >.basic-content-row-value-addit
+                      text-align: center
+                      font-size: 17px
+                      width: 87px
+                      margin: 0 1px 0
+      >.content-right
+        >.item-outfit
+          padding: 0
+          margin: 0
+          >.divide-block-item-content
+            padding: 15px 15px 0
+            height: 465px  //????
+            >.outfit-block
+              float: left
+            >.outfit-center
+              margin: auto
+              width: 268px
+              >.center-text
+                height: 15px
+                font-family: "Times New Roman"
+                color: $bch-content-stat-text-color
+                font-size: 14px
+                text-transform: uppercase
+                font-weight: bold
+                text-align: center
+              >.center-sex
+                background: $bch-girl-img
+                height: 314px
+                width: 262px
+                margin: auto
+              >.center-slots
+                height: 95px
+                width: 255px
+                margin: auto
+                >.outfit-slot-item
+                  float: left
+                  margin: 5px
+
+
+
+
+
+*
+  @include not-last-child('.outfit-slot-item')
+    margin-bottom: 5px
+.outfit-slot-item
+  width: 75px
+  >.outfit-slot-title
+    font-family: "Times New Roman"
+    color: $bch-content-stat-text-color
+    font-size: 14px
+    text-transform: uppercase
+    padding-left: 5px
+    font-weight: bold
+    margin: 0
+  >.outfit-slot-cell
+    width: 75px
+    height: 75px
+    border: 1px solid $page-brd-color
+
+
+
+
+
+
+
+

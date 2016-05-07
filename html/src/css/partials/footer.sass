@@ -7,7 +7,7 @@
   background-color: $page-bgc
   @include small-screen
   >.footer-text
-    cursor: $cursor-whi
+    //cursor: $cursor-whi
     position: absolute
     bottom: 0
     padding: 10px 5px 5px 120px
@@ -18,7 +18,10 @@
     font-family: Georgia
     box-shadow: inset 3px 3px 5px $footer-lightholo-color
   >.footer-logo
+    background-image: $footer-logo-image
+    background-size: cover
     width: 64px
+    height: 120px
     position: absolute
     left: 15px
     top: -21px
