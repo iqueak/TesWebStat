@@ -3,9 +3,9 @@ return [
     'components' => [
         'db' => [
             'class' => yii\db\Connection::class,
-            'dsn' => 'mysql:host=localhost;dbname=yiicms',
-            'username' => 'yiicms',
-            'password' => 'yiicms',
+            'dsn' => 'mysql:host=localhost;dbname=tes_gurps',
+            'username' => 'tes_gurps',
+            'password' => 'tes_gurps',
             'charset' => 'utf8',
         ],
         'mailer' => [

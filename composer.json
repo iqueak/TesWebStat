@@ -32,7 +32,7 @@
         "kartik-v/yii2-widgets": "@dev",
 
 		"himiklab/yii2-recaptcha-widget" : "*",
-		"fxp/composer-asset-plugin": "*",
+		"fxp/composer-asset-plugin": "^1.1",
 		"bower-asset/slimScroll": "*",
 		"bower-asset/iCheck": "*",
 		"bower-asset/bootbox": "*",
