@@ -40,3 +40,4 @@ phpunit.phar
 /bin/yii
 /web/acp.php
 /web/index.php
+/html/node_modules

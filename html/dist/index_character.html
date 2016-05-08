@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <title>Персонаж</title>
     <!--Libs-->
-    <link href="./vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./src/js/bxslider/jquery.bxslider.css" rel="stylesheet">
+    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <!--Styles-->
-    <link href="./src/css/style.css" rel="stylesheet">
-
+    <link href="css/application.min.css" rel="stylesheet">
 </head>
 <body>
 <!--<div style="background: url('/TESWebStat/src/img/tex.png');width: 1024px;height: 900px;position: absolute;top: 0px;left: 70px;z-index: 999;opacity: 0.3;"></div>
@@ -79,11 +77,7 @@
                                 <div class="basic-content-column-item-body">
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title-calc">Сила</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value-calc">10</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-buttons-calc">
                                             <div class="button-calc"></div>
                                             <div class="button-calc"></div>
@@ -91,11 +85,7 @@
                                     </div>
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title-calc">Ловкость</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value-calc">10</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-buttons-calc">
                                             <div class="button-calc"></div>
                                             <div class="button-calc"></div>
@@ -103,11 +93,7 @@
                                     </div>
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title-calc">Интеллект</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value-calc">10</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-buttons-calc">
                                             <div class="button-calc"></div>
                                             <div class="button-calc"></div>
@@ -115,11 +101,7 @@
                                     </div>
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title-calc">Здоровье</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value-calc">10</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-buttons-calc">
                                             <div class="button-calc"></div>
                                             <div class="button-calc"></div>
@@ -137,14 +119,10 @@
                                 <div class="basic-content-column-item-body">
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title">Cкорость</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value">5</div>
                                     </div>
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title">Базовый вес</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value">100</div>
                                     </div>
                                 </div>
@@ -156,24 +134,15 @@
                                 <div class="basic-content-column-item-body">
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title-calc">Воля</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value-calc">10</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-buttons-calc">
                                             <div class="button-calc"></div>
                                             <div class="button-calc"></div>
                                         </div>
                                     </div>
                                     <div class="basic-content-row row">
-                                        <div class="basic-content-element basic-content-row-title-calc">Восприятие
-                                        </div>
-                                        <!--
-                                                                                -->
+                                        <div class="basic-content-element basic-content-row-title-calc">Восприятие</div>
                                         <div class="basic-content-element basic-content-row-value-calc">10</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-buttons-calc">
                                             <div class="button-calc"></div>
                                             <div class="button-calc"></div>
@@ -181,11 +150,7 @@
                                     </div>
                                     <div class="basic-content-row row">
                                         <div class="basic-content-element basic-content-row-title-calc">Мораль</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-element basic-content-row-value-calc">1</div>
-                                        <!--
-                                                                                -->
                                         <div class="basic-content-buttons-calc">
                                             <div class="button-calc"></div>
                                             <div class="button-calc"></div>
@@ -285,12 +250,13 @@
                                 <div class="outfit-slot-cell"></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="skills-content row">
+            <div class="skills-title">Навыки</div>
+        </div>
 
     </section>
 </section>
@@ -304,15 +270,9 @@
     </div>
     <div class="footer-logo"></div>
 </footer>
-<script src="./vendor/jquery/dist/jquery.js"></script>
-<script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="./src/js/bxslider/jquery.bxslider-4.1.2.js"></script>
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $('.bxslider').bxSlider({
-            adaptiveHeight: false
-        });
-    });
     function footerToBottom() {
         var browserHeight = $(window).height(),
                 footerOuterHeight = $('.footer-block').outerHeight(true),
@@ -321,7 +281,6 @@
             'min-height': browserHeight - (footerOuterHeight + navOuterHeight)
         });
     }
-    ;
     footerToBottom();
     $(window).resize(function () {
         footerToBottom();

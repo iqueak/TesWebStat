@@ -1,0 +1,35 @@
+@mixin selection($color)
+  &::selection
+    background-color: $color
+  &::-moz-selection
+    background-color: $color
+@mixin small-screen()
+  @media only screen and (max-width: 1024px)
+    width: 100%
+    @content
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+@mixin unfocus
+  &:focus
+    outline: 0
+    color: rgba(0, 0, 0, .3)
+@mixin control-disabled
+  color: rgba($content-controls-tx-color,0.5)
+  pointer-events: none
+  cursor: $cursor-def
+  &:hover,&:active,&:visited
+    color: rgba($content-controls-tx-color,0.5)
+    cursor: $cursor-def
+@mixin not-last-child($selector)
+  & #{$selector}:not(:last-child)
+    @content
+@mixin not-first-child($selector)
+  & #{$selector}:not(:first-child)
+    @content

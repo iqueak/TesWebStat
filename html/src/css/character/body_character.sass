@@ -1,12 +1,5 @@
-
-@mixin not-last-child($selector)
-  & #{$selector}:not(:last-child)
-    @content
-
-@mixin not-first-child($selector)
-  & #{$selector}:not(:first-child)
-    @content
-
+@import "../mixins"
+@import "../theme"
 .page-block
   >.character-body-content
     margin: 0
@@ -203,11 +196,14 @@
                 >.outfit-slot-item
                   float: left
                   margin: 5px
-
-
-
-
-
+    >.skills-content
+      >.skills-title
+        font-size: 42px
+        font-family: "Times New Roman"
+        font-weight: bold
+        text-transform: uppercase
+        color: $bch-content-item-title-color
+        padding-left: 15px
 *
   @include not-last-child('.outfit-slot-item')
     margin-bottom: 5px

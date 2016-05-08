@@ -1,14 +1,5 @@
-@mixin selection($color)
-  &::selection
-    background-color: $color
-  &::-moz-selection
-    background-color: $color
-@mixin small-screen()
-  @media only screen and (max-width: 1024px)
-    width: 100%
-    @content
-
-
+@import "mixins"
+@import "theme"
 *
   margin: 0
   padding: 0
@@ -20,5 +11,5 @@ body
   background-color: $body-bgc
   cursor: $cursor-def
 
-a,input[type="submit"]
+a, input[type="submit"]
   cursor: $cursor-def

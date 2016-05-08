@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Персонаж</title>
+    <!--Libs-->
+    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
+    <!--Styles-->
+    <link href="css/application.min.css" rel="stylesheet">
+</head>
+<body>
+<!--<div style="background: url('/TESWebStat/src/img/tex.png');width: 1024px;height: 900px;position: absolute;top: 0px;left: 70px;z-index: 999;opacity: 0.3;"></div>
+-->
+<nav class="nav-block">
+    <div class="nav-container">
+        <div class="nav-logo nav-group-element">The Elder Scrolls</div>
+        <div class="nav-group-element">
+            <div class="nav-button">Новости</div>
+            <div class="nav-button">О ролевых играх</div>
+            <div class="nav-button">О нас</div>
+        </div>
+        <div class="nav-group-element">
+            <div class="nav-message">Привет "Игрок"</div>
+            <div class="nav-button nav-button-exit">Выход</div>
+        </div>
+    </div>
+</nav>
+<section class="page-block">
+    <section class="character-body-content container">
+        <div class="divide-content row">
+            <div class="content-divide-block content-left col-md-6 container">
+                <div class="content-divide-block-item item-char-info row">
+                    <div class="divide-block-item-title">Информация об персонаже</div>
+                    <div class="divide-block-item-content">
+                        <div class="char-info-statistics container">
+                            <div class="info-statistics-row row">
+                                <div class="statistics-row-column col-md-6">Имя:</div>
+                                <div class="statistics-row-column col-md-6">*NAME*</div>
+                            </div>
+                            <div class="info-statistics-row row">
+                                <div class="statistics-row-column col-md-6">Род:</div>
+                                <div class="statistics-row-column col-md-6">*FAMILY*</div>
+                            </div>
+                            <div class="info-statistics-row row">
+                                <div class="statistics-row-column col-md-6">Возраст:</div>
+                                <div class="statistics-row-column col-md-6">*AGE*</div>
+                            </div>
+                            <div class="info-statistics-row row">
+                                <div class="statistics-row-column col-md-6">Раса:</div>
+                                <div class="statistics-row-column col-md-6">*RACE*</div>
+                            </div>
+                            <div class="info-statistics-row row">
+                                <div class="statistics-row-column col-md-6">Пол:</div>
+                                <div class="statistics-row-column col-md-6">*SEX*</div>
+                            </div>
+                        </div>
+                        <div class="char-info-avatar"></div>
+                        <div class="char-info-main-params container">
+                            <div class="params-row param-health row">
+                                <div class="param-name">Здоровье %/%</div>
+                            </div>
+                            <div class="params-row param-manna row">
+                                <div class="param-name">Мана %/%</div>
+                            </div>
+                            <div class="params-row param-stamina row">
+                                <div class="param-name">Стамина %/%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-divide-block-item item-char-basic row">
+                    <div class="divide-block-item-title">Базовые аттрибуты</div>
+                    <div class="divide-block-item-content container">
+                        <div class="basic-content-column basic-content-left col-md-6 container">
+                            <div class="content-column-item row">
+                                <div class="basic-content-column-item-title">Первичные</div>
+                                <div class="basic-content-column-item-body">
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Сила</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">10</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Ловкость</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">10</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Интеллект</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">10</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Здоровье</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">10</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-value-bool">
+                                            Драконорожденный
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-column-item row">
+                                <div class="basic-content-column-item-title">Базовые</div>
+                                <div class="basic-content-column-item-body">
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title">Cкорость</div>
+                                        <div class="basic-content-element basic-content-row-value">5</div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title">Базовый вес</div>
+                                        <div class="basic-content-element basic-content-row-value">100</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic-content-column basic-content-right col-md-6 container">
+                            <div class="content-column-item row">
+                                <div class="basic-content-column-item-title">Вторичные</div>
+                                <div class="basic-content-column-item-body">
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Воля</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">10</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Восприятие</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">10</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Мораль</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">1</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Харизма</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">1</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-calc">Удача</div>
+                                        <div class="basic-content-element basic-content-row-value-calc">0</div>
+                                        <div class="basic-content-buttons-calc">
+                                            <div class="button-calc"></div>
+                                            <div class="button-calc"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-column-item row">
+                                <div class="basic-content-column-item-title">Дополнительные</div>
+                                <div class="basic-content-column-item-body">
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-addit">Уровень</div>
+                                        <div class="basic-content-element basic-content-row-value-addit">0</div>
+                                    </div>
+                                    <div class="basic-content-row row">
+                                        <div class="basic-content-element basic-content-row-title-addit">Опыт</div>
+                                        <div class="basic-content-element basic-content-row-value-addit">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-divide-block content-right col-md-6 container">
+                <div class="content-divide-block-item item-outfit row">
+                    <div class="divide-block-item-title">Обмундирование персонажа</div>
+                    <div class="divide-block-item-content">
+                        <div class="outfit-block outfit-left">
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">Голова</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">Грудь</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">Ноги</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">Обувь</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                        </div>
+                        <div class="outfit-block outfit-center">
+                            <div class="center-text">*NAME*</div>
+                            <div class="center-text">*LEVEL*</div>
+                            <div class="center-sex"></div>
+                            <div class="center-slots">
+                                <div class="outfit-slot-item">
+                                    <div class="outfit-slot-title">Шея</div>
+                                    <div class="outfit-slot-cell"></div>
+                                </div>
+                                <div class="outfit-slot-item">
+                                    <div class="outfit-slot-title">Кольцо</div>
+                                    <div class="outfit-slot-cell"></div>
+                                </div>
+                                <div class="outfit-slot-item">
+                                    <div class="outfit-slot-title">Кольцо</div>
+                                    <div class="outfit-slot-cell"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outfit-block outfit-right">
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">Плащ</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">Пояс</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">Л. Рука</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                            <div class="outfit-slot-item">
+                                <div class="outfit-slot-title">П. Рука</div>
+                                <div class="outfit-slot-cell"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-content row">
+            <div class="skills-title">Навыки</div>
+        </div>
+
+    </section>
+</section>
+<footer class="footer-block">
+    <div class="footer-text">
+        <p>Design powered zealon Group© 2015. All graphical or text OR another information are property of their
+            owners.</p>
+        Trademarks: The Elder Scrolls, Skyrim, Dragonborn, Hearthfire, Dawnguard, Oblivion, Shivering Isles, Knights
+        of the Nine, Morrowind, Tribunal, Bloodmoon, Daggerfall, Redguard, Battlespire, Arena belong to ZeniMax Med
+        ia Inc.
+    </div>
+    <div class="footer-logo"></div>
+</footer>
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/js/bootstrap.min.js"></script>
+<script src="js/bxslider/jquery.bxslider-4.1.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.bxslider').bxSlider({
+            adaptiveHeight: false
+        });
+    });
+    function footerToBottom() {
+        var browserHeight = $(window).height(),
+                footerOuterHeight = $('.footer-block').outerHeight(true),
+                navOuterHeight = $('.nav-block').outerHeight(true);
+        $('.page-block').css({
+            'min-height': browserHeight - (footerOuterHeight + navOuterHeight)
+        });
+    }
+    footerToBottom();
+    $(window).resize(function () {
+        footerToBottom();
+    });
+</script>
+</body>
+</html>
