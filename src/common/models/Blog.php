@@ -2,6 +2,8 @@
 
 namespace common\models;
 
+use common\models\behaviors\DateTimeBehavior;
+use DateTime;
 use Yii;
 use yii\db\ActiveRecord;
 
@@ -16,20 +18,43 @@ use yii\db\ActiveRecord;
  * @property string $summary
  * @property string $content
  * @property integer $status
- * @property string $created_at
- * @property string $updated_at
+ * @property DateTime $created_at
+ * @property DateTime $updated_at
  *
  * @property User $author
  * @property BlogCategory $category
  */
 class Blog extends ActiveRecord
 {
+    //TODO: Под вопросом ??
+    const STATUS_DRAFT = 0;
+    const STATUS_DELETED = 1;
+    const STATUS_ERROR = 2;
+    const STATUS_PUBLISHED = 3;
+
+    public $statusLabels = [
+        0 => 'DRAFT',
+        1 => 'DELETED',
+        2 => 'ERROR',
+        3 => 'PUBLISHED'
+    ];
+
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
         return '{{%blog}}';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            DateTimeBehavior::className()
+        ];
     }
 
     /**

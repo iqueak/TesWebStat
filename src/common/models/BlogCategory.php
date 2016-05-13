@@ -2,6 +2,8 @@
 
 namespace common\models;
 
+use common\models\behaviors\DateTimeBehavior;
+use DateTime;
 use Yii;
 use yii\db\ActiveRecord;
 
@@ -11,8 +13,8 @@ use yii\db\ActiveRecord;
  * @property integer $id
  * @property string $title
  * @property string $slug
- * @property string $created_at
- * @property string $updated_at
+ * @property DateTime $created_at
+ * @property DateTime $updated_at
  *
  * @property Blog[] $blogs
  */
@@ -24,6 +26,16 @@ class BlogCategory extends ActiveRecord
     public static function tableName()
     {
         return '{{%blog_category}}';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            DateTimeBehavior::className()
+        ];
     }
 
     /**
