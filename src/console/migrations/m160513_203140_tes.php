@@ -43,6 +43,7 @@ class m160513_203140_tes extends Migration
         ]);
         $this->createTable('{{%players}}', [
             'player_id' => $this->primaryKey(),
+            'user_id' => $this->integer()->notNull(),
             'first_name' => $this->string()->notNull(),
             'last_name' => $this->string(),
             'sex' => $this->integer()->notNull(),
@@ -82,6 +83,7 @@ class m160513_203140_tes extends Migration
             'speech' => $this->integer()->notNull(),
             'alchemy' => $this->integer()->notNull()
         ]);
+        $this->addForeignKey('fk_players_user_id','{{%players}}','user_id','{{%auth_user}}', 'id', null, 'CASCADE');
         $this->addForeignKey('fk_bafs_player_id', '{{%bafs}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
         $this->addForeignKey('fk_perks_player_id', '{{%perks}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
         $this->addForeignKey('fk_spells_player_id', '{{%spells}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
@@ -93,6 +95,7 @@ class m160513_203140_tes extends Migration
 
     public function down()
     {
+        $this->dropForeignKey('fk_players_user_id', '{{%players}}');
         $this->dropForeignKey('fk_bafs_player_id', '{{%bafs}}');
         $this->dropForeignKey('fk_perks_player_id', '{{%perks}}');
         $this->dropForeignKey('fk_spells_player_id', '{{%spells}}');
