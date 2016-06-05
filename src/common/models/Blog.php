@@ -54,7 +54,7 @@ class Blog extends ActiveRecord
             'slug' => [
                 'class' => 'yii\zelenin\yii2-slug-behavior\Slug',
                 'slugAttribute' => 'slug',
-                'attribute' => 'blog',
+                'attribute' => ['title','id'],
                 'ensureUnique' => true,
                 'replacement' => '-',
                 'lowercase' => true,

@@ -174,19 +174,72 @@ class m160604_235257_tes_rbac extends Migration
 
     public function down()
     {
-        echo "m160604_235257_tes_rbac cannot be reverted.\n";
-
+        $authManager = Yii::$app->authManager;
+        $TESViewBafs = $authManager->getPermission('TESViewBafs');
+        $TESCreateBafs = $authManager->getPermission('TESCreateBafs');
+        $TESDeleteBafs = $authManager->getPermission('TESDeleteBafs');
+        $TESUpdateBafs = $authManager->getPermission('TESUpdateBafs');
+        $TESViewPerks = $authManager->getPermission('TESViewPerks');
+        $TESCreatePerks = $authManager->getPermission('TESCreatePerks');
+        $TESDeletePerks = $authManager->getPermission('TESDeletePerks');
+        $TESUpdatePerks = $authManager->getPermission('TESUpdatePerks');
+        $TESViewSpells = $authManager->getPermission('TESViewSpells');
+        $TESCreateSpells = $authManager->getPermission('TESCreateSpells');
+        $TESDeleteSpells = $authManager->getPermission('TESDeleteSpells');
+        $TESUpdateSpells = $authManager->getPermission('TESUpdateSpells');
+        $TESViewInventory = $authManager->getPermission('TESViewInventory');
+        $TESCreateInventory = $authManager->getPermission('TESCreateInventory');
+        $TESDeleteInventory = $authManager->getPermission('TESDeleteInventory');
+        $TESUpdateInventory = $authManager->getPermission('TESUpdateInventory');
+        $TESViewItem_List = $authManager->getPermission('TESViewItem_List');
+        $TESCreateItem_List = $authManager->getPermission('TESCreateItem_List');
+        $TESDeleteItem_List = $authManager->getPermission('TESDeleteItem_List');
+        $TESUpdateItem_List = $authManager->getPermission('TESUpdateItem_List');
+        $TESViewPlayers = $authManager->getPermission('TESViewPlayers');
+        $TESCreatePlayers = $authManager->getPermission('TESCreatePlayers');
+        $TESDeletePlayers = $authManager->getPermission('TESDeletePlayers');
+        $TESUpdatePlayers = $authManager->getPermission('TESUpdatePlayers');
+        $TESViewStats = $authManager->getPermission('TESViewStats');
+        $TESCreateStats = $authManager->getPermission('TESCreateStats');
+        $TESDeleteStats = $authManager->getPermission('TESDeleteStats');
+        $TESUpdateStats = $authManager->getPermission('TESUpdateStats');
+        $TESViewSkills = $authManager->getPermission('TESViewSkills');
+        $TESCreateSkills = $authManager->getPermission('TESCreateSkills');
+        $TESDeleteSkills = $authManager->getPermission('TESDeleteSkills');
+        $TESUpdateSkills = $authManager->getPermission('TESUpdateSkills');
+        $administrateRBAC = $authManager->getPermission('administrateRBAC');
+        $authManager->removeChild($administrateRBAC, $TESViewBafs);
+        $authManager->removeChild($administrateRBAC, $TESCreateBafs);
+        $authManager->removeChild($administrateRBAC, $TESDeleteBafs);
+        $authManager->removeChild($administrateRBAC, $TESUpdateBafs);
+        $authManager->removeChild($administrateRBAC, $TESViewPerks);
+        $authManager->removeChild($administrateRBAC, $TESCreatePerks);
+        $authManager->removeChild($administrateRBAC, $TESDeletePerks);
+        $authManager->removeChild($administrateRBAC, $TESUpdatePerks);
+        $authManager->removeChild($administrateRBAC, $TESViewSpells);
+        $authManager->removeChild($administrateRBAC, $TESCreateSpells);
+        $authManager->removeChild($administrateRBAC, $TESDeleteSpells);
+        $authManager->removeChild($administrateRBAC, $TESUpdateSpells);
+        $authManager->removeChild($administrateRBAC, $TESViewInventory);
+        $authManager->removeChild($administrateRBAC, $TESCreateInventory);
+        $authManager->removeChild($administrateRBAC, $TESDeleteInventory);
+        $authManager->removeChild($administrateRBAC, $TESUpdateInventory);
+        $authManager->removeChild($administrateRBAC, $TESViewItem_List);
+        $authManager->removeChild($administrateRBAC, $TESCreateItem_List);
+        $authManager->removeChild($administrateRBAC, $TESDeleteItem_List);
+        $authManager->removeChild($administrateRBAC, $TESUpdateItem_List);
+        $authManager->removeChild($administrateRBAC, $TESViewPlayers);
+        $authManager->removeChild($administrateRBAC, $TESCreatePlayers);
+        $authManager->removeChild($administrateRBAC, $TESDeletePlayers);
+        $authManager->removeChild($administrateRBAC, $TESUpdatePlayers);
+        $authManager->removeChild($administrateRBAC, $TESViewStats);
+        $authManager->removeChild($administrateRBAC, $TESCreateStats);
+        $authManager->removeChild($administrateRBAC, $TESDeleteStats);
+        $authManager->removeChild($administrateRBAC, $TESUpdateStats);
+        $authManager->removeChild($administrateRBAC, $TESViewSkills);
+        $authManager->removeChild($administrateRBAC, $TESCreateSkills);
+        $authManager->removeChild($administrateRBAC, $TESDeleteSkills);
+        $authManager->removeChild($administrateRBAC, $TESUpdateSkills);
         return false;
     }
-
-    /*
-    // Use safeUp/safeDown to run migration code within a transaction
-    public function safeUp()
-    {
-    }
-
-    public function safeDown()
-    {
-    }
-    */
 }

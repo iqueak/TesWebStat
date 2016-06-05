@@ -55,8 +55,25 @@ class m160604_183103_blog_rbac extends Migration
 
     public function down()
     {
-        echo "m160604_183103_blog_rbac cannot be reverted.\n";
+        $authManager = Yii::$app->authManager;
+        $BLViewBlog = $authManager->getPermission('BLViewBlog');
+        $BLCreateBlog = $authManager->getPermission('BLCreateBlog');
+        $BLUpdateBlog = $authManager->getPermission('BLUpdateBlog');
+        $BLDeleteBlog = $authManager->getPermission('BLDeleteBlog');
+        $BLViewBlogCategory = $authManager->getPermission('BLViewBlogCategory');
+        $BLCreateBlogCategory = $authManager->getPermission('BLCreateBlogCategory');
+        $BLUpdateBlogCategory = $authManager->getPermission('BLUpdateBlogCategory');
+        $BLDeleteBlogCategory = $authManager->getPermission('BLDeleteBlogCategory');
+        $administrateRBAC = $authManager->getPermission('administrateRBAC');
 
+        $authManager->removeChild($administrateRBAC, $BLViewBlog);
+        $authManager->removeChild($administrateRBAC, $BLCreateBlog);
+        $authManager->removeChild($administrateRBAC, $BLUpdateBlog);
+        $authManager->removeChild($administrateRBAC, $BLDeleteBlog);
+        $authManager->removeChild($administrateRBAC, $BLViewBlogCategory);
+        $authManager->removeChild($administrateRBAC, $BLCreateBlogCategory);
+        $authManager->removeChild($administrateRBAC, $BLUpdateBlogCategory);
+        $authManager->removeChild($administrateRBAC, $BLDeleteBlogCategory);
         return false;
     }
 
