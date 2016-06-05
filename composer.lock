@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "df0da7dd26320f8b3db145e506111fb3",
-    "content-hash": "99c3abf7e3f8d47620cb2bffb6c182f6",
+    "hash": "88843bc180cd1a0cff3fbf94502f44c1",
+    "content-hash": "22a274b64cb2cdc28b99cd5277e11548",
     "packages": [
         {
             "name": "barracuda/copy",
@@ -208,16 +208,16 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "af22a351b2ea5801ffb1695abb3bb34d5bed9198"
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/af22a351b2ea5801ffb1695abb3bb34d5bed9198",
-                "reference": "af22a351b2ea5801ffb1695abb3bb34d5bed9198",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -1091,12 +1091,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-grid.git",
-                "reference": "0473f04f1af0f8c93c3270c658db9602e97f5f9e"
+                "reference": "2f39c05ec05b39452e818c2c49d1d1cee5f51771"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/0473f04f1af0f8c93c3270c658db9602e97f5f9e",
-                "reference": "0473f04f1af0f8c93c3270c658db9602e97f5f9e",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/2f39c05ec05b39452e818c2c49d1d1cee5f51771",
+                "reference": "2f39c05ec05b39452e818c2c49d1d1cee5f51771",
                 "shasum": ""
             },
             "require": {
@@ -1132,7 +1132,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-05-01 18:38:26"
+            "time": "2016-05-15 18:54:47"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -3008,6 +3008,97 @@
                 "yii2"
             ],
             "time": "2016-03-17 03:58:49"
+        },
+        {
+            "name": "zelenin/string",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zelenin/string.git",
+                "reference": "d57f21f32d2b2eb52e96e892500afaeb0b3fac19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zelenin/string/zipball/d57f21f32d2b2eb52e96e892500afaeb0b3fac19",
+                "reference": "d57f21f32d2b2eb52e96e892500afaeb0b3fac19",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zelenin\\Ddd\\String\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aleksandr Zelenin",
+                    "email": "aleksandr@zelenin.me",
+                    "homepage": "http://zelenin.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "String transformers collection",
+            "homepage": "https://github.com/zelenin/string",
+            "keywords": [
+                "ddd",
+                "slug",
+                "string",
+                "translit"
+            ],
+            "time": "2015-12-23 00:06:30"
+        },
+        {
+            "name": "zelenin/yii2-slug-behavior",
+            "version": "1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zelenin/yii2-slug-behavior.git",
+                "reference": "e40f370c55825a2ea65ef0e47c6f7c46b7703485"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zelenin/yii2-slug-behavior/zipball/e40f370c55825a2ea65ef0e47c6f7c46b7703485",
+                "reference": "e40f370c55825a2ea65ef0e47c6f7c46b7703485",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.7",
+                "zelenin/string": "~0.0.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "Zelenin\\yii\\behaviors\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aleksandr Zelenin",
+                    "email": "aleksandr@zelenin.me",
+                    "homepage": "http://zelenin.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 slug behavior",
+            "homepage": "https://github.com/zelenin/yii2-slug-behavior",
+            "keywords": [
+                "Behavior",
+                "slug",
+                "yii2"
+            ],
+            "time": "2016-02-14 21:37:51"
         }
     ],
     "packages-dev": [],

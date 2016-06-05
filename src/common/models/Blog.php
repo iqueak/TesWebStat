@@ -26,17 +26,14 @@ use yii\db\ActiveRecord;
  */
 class Blog extends ActiveRecord
 {
-    //TODO: Под вопросом ??
     const STATUS_DRAFT = 0;
     const STATUS_DELETED = 1;
-    const STATUS_ERROR = 2;
-    const STATUS_PUBLISHED = 3;
+    const STATUS_PUBLISHED = 2;
 
     public $statusLabels = [
         0 => 'DRAFT',
         1 => 'DELETED',
-        2 => 'ERROR',
-        3 => 'PUBLISHED'
+        2 => 'PUBLISHED'
     ];
 
     /**
@@ -53,7 +50,17 @@ class Blog extends ActiveRecord
     public function behaviors()
     {
         return [
-            DateTimeBehavior::className()
+            DateTimeBehavior::className(),
+            'slug' => [
+                'class' => 'yii\zelenin\yii2-slug-behavior\Slug',
+                'slugAttribute' => 'slug',
+                'attribute' => 'blog',
+                'ensureUnique' => true,
+                'replacement' => '-',
+                'lowercase' => true,
+                'immutable' => false,
+                'transliterateOptions' => 'Russian-Latin/BGN; Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC;'
+            ]
         ];
     }
 

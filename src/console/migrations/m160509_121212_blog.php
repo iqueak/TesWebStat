@@ -30,7 +30,6 @@ class m160509_121212_blog extends Migration
         ]);
         $this->addForeignKey('fk_blog_category_id', '{{%blog}}', 'category_id', '{{%blog_category}}', 'id', null, 'CASCADE');
         $this->addForeignKey('fk_blog_author_id', '{{%blog}}', 'author_id', '{{%auth_user}}', 'id', null, 'CASCADE');
-
     }
 
     public function down()

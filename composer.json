@@ -21,6 +21,8 @@
 		"yiisoft/yii2-gii": "*",
 		"yiisoft/yii2-faker": "*",
         "yiisoft/yii2-jui": "*",
+		
+		"zelenin/yii2-slug-behavior": "~1.5.1",
 
         "creocoder/yii2-flysystem": "0.8.*",
         "league/flysystem-copy": "~1.0",
