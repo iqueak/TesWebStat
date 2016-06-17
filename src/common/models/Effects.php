@@ -6,7 +6,7 @@ use Yii;
 use yii\db\ActiveRecord;
 
 /**
- * This is the model class for table "{{%bafs}}".
+ * This is the model class for table "{{%effects}}".
  *
  * @property integer $player_id
  * @property string $name
@@ -14,14 +14,14 @@ use yii\db\ActiveRecord;
  *
  * @property Players $player
  */
-class Bafs extends ActiveRecord
+class Effects extends ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%bafs}}';
+        return '{{%effects}}';
     }
 
     /**

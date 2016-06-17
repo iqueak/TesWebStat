@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Bafs;
-use common\models\search\BafsSearch;
+use common\models\Effects;
+use common\models\search\EffectsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * BafsController implements the CRUD actions for Bafs model.
+ * EffectsController implements the CRUD actions for Effects model.
  */
-class BafsController extends Controller
+class EffectsController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class BafsController extends Controller
     }
 
     /**
-     * Lists all Bafs models.
+     * Lists all Effects models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new BafsSearch();
+        $searchModel = new EffectsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class BafsController extends Controller
     }
 
     /**
-     * Displays a single Bafs model.
+     * Displays a single Effects model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class BafsController extends Controller
     }
 
     /**
-     * Creates a new Bafs model.
+     * Creates a new Effects model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Bafs();
+        $model = new Effects();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->player_id]);
@@ -75,7 +75,7 @@ class BafsController extends Controller
     }
 
     /**
-     * Updates an existing Bafs model.
+     * Updates an existing Effects model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class BafsController extends Controller
     }
 
     /**
-     * Deletes an existing Bafs model.
+     * Deletes an existing Effects model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class BafsController extends Controller
     }
 
     /**
-     * Finds the Bafs model based on its primary key value.
+     * Finds the Effects model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Bafs the loaded model
+     * @return Effects the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Bafs::findOne($id)) !== null) {
+        if (($model = Effects::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -17,7 +17,7 @@ use yii\db\ActiveRecord;
  * @property integer $age
  * @property string $legend
  *
- * @property Bafs $bafs
+ * @property Effects $effects
  * @property Inventory[] $inventories
  * @property Perks $perks
  * @property User $user
@@ -69,9 +69,9 @@ class Players extends ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBafs()
+    public function getEffects()
     {
-        return $this->hasOne(Bafs::className(), ['player_id' => 'player_id']);
+        return $this->hasOne(Effects::className(), ['player_id' => 'player_id']);
     }
 
     /**

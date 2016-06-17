@@ -5,12 +5,12 @@ namespace common\models\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Bafs;
+use common\models\Effects;
 
 /**
- * BafsSearch represents the model behind the search form about `common\models\Bafs`.
+ * EffectsSearch represents the model behind the search form about `common\models\Effects`.
  */
-class BafsSearch extends Bafs
+class EffectsSearch extends Effects
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class BafsSearch extends Bafs
      */
     public function search($params)
     {
-        $query = Bafs::find();
+        $query = Effects::find();
 
         // add conditions that should always apply here
 

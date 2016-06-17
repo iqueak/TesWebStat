@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\search\BafsSearch */
+/* @var $model common\models\search\EffectsSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="bafs-search">
+<div class="effects-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],

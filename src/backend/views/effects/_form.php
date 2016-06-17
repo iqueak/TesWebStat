@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Bafs */
+/* @var $model common\models\Effects */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="bafs-form">
+<div class="effects-form">
 
     <?php $form = ActiveForm::begin(); ?>
 

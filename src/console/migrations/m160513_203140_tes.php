@@ -6,7 +6,7 @@ class m160513_203140_tes extends Migration
 {
     public function up()
     {
-        $this->createTable('{{%bafs}}', [
+        $this->createTable('{{%effects}}', [
             'player_id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
             'desc' => $this->text()
@@ -84,7 +84,7 @@ class m160513_203140_tes extends Migration
             'alchemy' => $this->integer()->notNull()
         ]);
         $this->addForeignKey('fk_players_user_id','{{%players}}','user_id','{{%auth_user}}', 'id', null, 'CASCADE');
-        $this->addForeignKey('fk_bafs_player_id', '{{%bafs}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
+        $this->addForeignKey('fk_effects_player_id', '{{%effects}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
         $this->addForeignKey('fk_perks_player_id', '{{%perks}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
         $this->addForeignKey('fk_spells_player_id', '{{%spells}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
         $this->addForeignKey('fk_inventory_player_id', '{{%inventory}}', 'player_id', '{{%players}}', 'player_id', null, 'CASCADE');
@@ -96,14 +96,14 @@ class m160513_203140_tes extends Migration
     public function down()
     {
         $this->dropForeignKey('fk_players_user_id', '{{%players}}');
-        $this->dropForeignKey('fk_bafs_player_id', '{{%bafs}}');
+        $this->dropForeignKey('fk_effects_player_id', '{{%effects}}');
         $this->dropForeignKey('fk_perks_player_id', '{{%perks}}');
         $this->dropForeignKey('fk_spells_player_id', '{{%spells}}');
         $this->dropForeignKey('fk_inventory_player_id', '{{%inventory}}');
         $this->dropForeignKey('fk_inventory_item_id', '{{%inventory}');
         $this->dropForeignKey('fk_stats_player_id', '{{%stats}}');
         $this->dropForeignKey('fk_skills_player_id', '{{%skills}}');
-        $this->dropTable('{{%bafs}}');
+        $this->dropTable('{{%effects}}');
         $this->dropTable('{{%perks}}');
         $this->dropTable('{{%spells}}');
         $this->dropTable('{{%inventory}}');

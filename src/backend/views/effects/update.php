@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Bafs */
+/* @var $model common\models\Effects */
 
-$this->title = 'Update Bafs: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Bafs', 'url' => ['index']];
+$this->title = 'Update Effects: ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Effects', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->player_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="bafs-update">
+<div class="effects-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

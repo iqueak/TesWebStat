@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Bafs */
+/* @var $model common\models\Effects */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Bafs', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Effects', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="bafs-view">
+<div class="effects-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

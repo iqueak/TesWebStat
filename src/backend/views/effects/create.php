@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Bafs */
+/* @var $model common\models\Effects */
 
-$this->title = 'Create Bafs';
-$this->params['breadcrumbs'][] = ['label' => 'Bafs', 'url' => ['index']];
+$this->title = 'Create Effects';
+$this->params['breadcrumbs'][] = ['label' => 'Effects', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="bafs-create">
+<div class="effects-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

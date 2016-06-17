@@ -8,21 +8,21 @@ class m160604_235257_tes_rbac extends Migration
     {
         $authManager = Yii::$app->authManager;
         //Permission
-        $TESViewBafs = $authManager->createPermission('TESViewBafs');
-        $TESViewBafs->description = 'Can view bafs';
-        $authManager->add($TESViewBafs);
+        $TESViewEffects = $authManager->createPermission('TESViewEffects');
+        $TESViewEffects->description = 'Can view effects';
+        $authManager->add($TESViewEffects);
 
-        $TESCreateBafs = $authManager->createPermission('TESCreateBafs');
-        $TESCreateBafs->description = 'Can create bafs';
-        $authManager->add($TESCreateBafs);
+        $TESCreateEffects = $authManager->createPermission('TESCreateEffects');
+        $TESCreateEffects->description = 'Can create effects';
+        $authManager->add($TESCreateEffects);
 
-        $TESDeleteBafs = $authManager->createPermission('TESDeleteBafs');
-        $TESDeleteBafs->description = 'Can delete bafs';
-        $authManager->add($TESDeleteBafs);
+        $TESDeleteEffects = $authManager->createPermission('TESDeleteEffects');
+        $TESDeleteEffects->description = 'Can delete effects';
+        $authManager->add($TESDeleteEffects);
 
-        $TESUpdateBafs = $authManager->createPermission('TESUpdateBafs');
-        $TESUpdateBafs->description = 'Can update bafs';
-        $authManager->add($TESUpdateBafs);
+        $TESUpdateEffects = $authManager->createPermission('TESUpdateEffects');
+        $TESUpdateEffects->description = 'Can update effects';
+        $authManager->add($TESUpdateEffects);
 
         $TESViewPerks = $authManager->createPermission('TESViewPerks');
         $TESViewPerks->description = 'Can view perks';
@@ -138,10 +138,10 @@ class m160604_235257_tes_rbac extends Migration
 
         $administrateRBAC = $authManager->getPermission('administrateRBAC');
 
-        $authManager->addChild($administrateRBAC, $TESViewBafs);
-        $authManager->addChild($administrateRBAC, $TESCreateBafs);
-        $authManager->addChild($administrateRBAC, $TESDeleteBafs);
-        $authManager->addChild($administrateRBAC, $TESUpdateBafs);
+        $authManager->addChild($administrateRBAC, $TESViewEffects);
+        $authManager->addChild($administrateRBAC, $TESCreateEffects);
+        $authManager->addChild($administrateRBAC, $TESDeleteEffects);
+        $authManager->addChild($administrateRBAC, $TESUpdateEffects);
         $authManager->addChild($administrateRBAC, $TESViewPerks);
         $authManager->addChild($administrateRBAC, $TESCreatePerks);
         $authManager->addChild($administrateRBAC, $TESDeletePerks);
@@ -175,10 +175,10 @@ class m160604_235257_tes_rbac extends Migration
     public function down()
     {
         $authManager = Yii::$app->authManager;
-        $TESViewBafs = $authManager->getPermission('TESViewBafs');
-        $TESCreateBafs = $authManager->getPermission('TESCreateBafs');
-        $TESDeleteBafs = $authManager->getPermission('TESDeleteBafs');
-        $TESUpdateBafs = $authManager->getPermission('TESUpdateBafs');
+        $TESViewEffects = $authManager->getPermission('TESViewEffects');
+        $TESCreateEffects = $authManager->getPermission('TESCreateEffects');
+        $TESDeleteEffects = $authManager->getPermission('TESDeleteEffects');
+        $TESUpdateEffects = $authManager->getPermission('TESUpdateEffects');
         $TESViewPerks = $authManager->getPermission('TESViewPerks');
         $TESCreatePerks = $authManager->getPermission('TESCreatePerks');
         $TESDeletePerks = $authManager->getPermission('TESDeletePerks');
@@ -208,10 +208,10 @@ class m160604_235257_tes_rbac extends Migration
         $TESDeleteSkills = $authManager->getPermission('TESDeleteSkills');
         $TESUpdateSkills = $authManager->getPermission('TESUpdateSkills');
         $administrateRBAC = $authManager->getPermission('administrateRBAC');
-        $authManager->removeChild($administrateRBAC, $TESViewBafs);
-        $authManager->removeChild($administrateRBAC, $TESCreateBafs);
-        $authManager->removeChild($administrateRBAC, $TESDeleteBafs);
-        $authManager->removeChild($administrateRBAC, $TESUpdateBafs);
+        $authManager->removeChild($administrateRBAC, $TESViewEffects);
+        $authManager->removeChild($administrateRBAC, $TESCreateEffects);
+        $authManager->removeChild($administrateRBAC, $TESDeleteEffects);
+        $authManager->removeChild($administrateRBAC, $TESUpdateEffects);
         $authManager->removeChild($administrateRBAC, $TESViewPerks);
         $authManager->removeChild($administrateRBAC, $TESCreatePerks);
         $authManager->removeChild($administrateRBAC, $TESDeletePerks);
