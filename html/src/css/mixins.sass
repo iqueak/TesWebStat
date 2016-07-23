@@ -35,3 +35,9 @@
 @mixin not-first-child($selector)
   & #{$selector}:not(:first-child)
     @content
+@mixin even-child($selector)
+    & #{$selector}:nth-child(even)
+      @content
+@mixin odd-child($selector)
+  & #{$selector}:nth-child(odd)
+    @content

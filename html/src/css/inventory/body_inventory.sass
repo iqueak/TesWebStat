@@ -1,0 +1,54 @@
+@import "../theme.sass"
+@import "../mixins.sass"
+.page-block
+  >.inventory_body_content
+    width: 100%
+    padding: 40px 10px 0
+    >.inventory_title
+      font-size: 20px
+      font-family: "Times New Roman"
+      font-weight: bold
+      text-transform: uppercase
+      color: $cc-content-title-color
+      padding-left: 15px
+    >.inventory_table
+      width: 100%
+      display: block
+      border: 1px solid $page-brd-color
+      @include not-last-child('.inventory_table_row')
+        border-bottom: 1px solid $page-brd-color
+      @include even-child('.inventory_table_usual_row')
+        background-color: $inv-table-usual-fir-row-color
+      @include odd-child('.inventory_table_usual_row')
+        background-color: $inv-table-usual-sec-row-color
+      >.inventory_table_row
+        width: 100%
+        @include not-last-child('.inventory_column')
+          border-right: 1px solid $page-brd-color
+        >.inventory_column
+          height: 100%
+          float: left
+        >.inventory_column-1
+          width: 650px
+        >.inventory_column-2
+          width: 50px
+        >.inventory_column-3
+          width: 70px
+        >.inventory_column-4
+          width: 60px
+        >.inventory_column-5
+          width: 60px
+        >.inventory_column-6
+          width: 112px
+      >.inventory_table_zero_row
+        height: 35px
+        >.inventory_zero_column-1
+          width: 79%
+        >.inventory_zero_column-2
+          width: 21%
+      >.inventory_table_title_row
+        height: 30px
+      >.inventory_table_usual_row
+        height: 45px
+      >.inventory_table_final_row
+        height: 20px

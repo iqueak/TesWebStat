@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Инвентарь</title>
+    <!--Libs-->
+    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
+    <!--Styles-->
+    <link href="css/application.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="nav-block">
+    <div class="nav-container">
+        <div class="nav-logo nav-group-element">The Elder Scrolls</div>
+        <div class="nav-group-element">
+            <div class="nav-button">Новости</div>
+            <div class="nav-button">О ролевых играх</div>
+            <div class="nav-button">О нас</div>
+        </div>
+        <div class="nav-group-element">
+            <div class="nav-message">Привет "Игрок"</div>
+            <div class="nav-button nav-button-exit">Выход</div>
+        </div>
+    </div>
+</nav>
+<section class="page-block">
+    <div class="inventory_body_content container">
+        <div class="inventory_title">Ваш инвентарь</div>
+        <div class="inventory_table">
+            <div class="inventory_table_row inventory_table_zero_row">
+                <div class="inventory_column inventory_zero_column-1"></div>
+                <div class="inventory_column inventory_zero_column-2"></div>
+            </div>
+            <div class="inventory_table_row inventory_table_title_row">
+                <div class="inventory_column inventory_column-1"></div>
+                <div class="inventory_column inventory_column-2"></div>
+                <div class="inventory_column inventory_column-3"></div>
+                <div class="inventory_column inventory_column-4"></div>
+                <div class="inventory_column inventory_column-5"></div>
+                <div class="inventory_column inventory_column-6"></div>
+            </div>
+            <div class="inventory_table_row inventory_table_usual_row">
+                <div class="inventory_column inventory_column-1"></div>
+                <div class="inventory_column inventory_column-2"></div>
+                <div class="inventory_column inventory_column-3"></div>
+                <div class="inventory_column inventory_column-4"></div>
+                <div class="inventory_column inventory_column-5"></div>
+                <div class="inventory_column inventory_column-6"></div>
+            </div>
+            <div class="inventory_table_row inventory_table_usual_row">
+                <div class="inventory_column inventory_column-1"></div>
+                <div class="inventory_column inventory_column-2"></div>
+                <div class="inventory_column inventory_column-3"></div>
+                <div class="inventory_column inventory_column-4"></div>
+                <div class="inventory_column inventory_column-5"></div>
+                <div class="inventory_column inventory_column-6"></div>
+            </div>
+            <div class="inventory_table_row inventory_table_final_row"></div>
+        </div>
+
+    </div>
+</section>
+<footer class="footer-block">
+    <div class="footer-text">
+        <p>Design powered zealon Group© 2015. All graphical or text OR another information are property of their
+            owners.</p>
+        Trademarks: The Elder Scrolls, Skyrim, Dragonborn, Hearthfire, Dawnguard, Oblivion, Shivering Isles, Knights
+        of the Nine, Morrowind, Tribunal, Bloodmoon, Daggerfall, Redguard, Battlespire, Arena belong to ZeniMax Med
+        ia Inc.
+    </div>
+    <div class="footer-logo"></div>
+</footer>
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/js/bootstrap.min.js"></script>
+<script>
+    function footerToBottom() {
+        var browserHeight = $(window).height(),
+                footerOuterHeight = $('.footer-block').outerHeight(true),
+                navOuterHeight = $('.nav-block').outerHeight(true);
+        $('.page-block').css({
+            'min-height': browserHeight - (footerOuterHeight + navOuterHeight)
+        });
+    }
+    footerToBottom();
+    $(window).resize(function () {
+        footerToBottom();
+    });
+</script>
+</body>
+</html>
